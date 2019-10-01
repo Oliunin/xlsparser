@@ -4,7 +4,7 @@ import sqlite3
 conn = sqlite3.connect('xlsparser.db')
 cur = conn.cursor()
 
-rb = xlrd.open_workbook('registry_small.xls',formatting_info=True)
+rb = xlrd.open_workbook('registry_full.xls',formatting_info=True)
 sheet = rb.sheet_by_index(0)
 
 #Считываем из эксельки переменные
