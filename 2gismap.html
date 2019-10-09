@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- [55.15402, 61.42915]
+[55.2510643, 61.4002826] -->
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+  </head>
+  <body>
+      <div id="map" style="width: 90%; height: 400px;"></div>
+      <script>
+      // debugger;
+      DG.then(function() {var map = DG.map('map', {center: [55.15402, 61.42915],zoom: 10});
+
+      marker1 = DG.marker([55.2510643, 61.4002826]).addTo(map).bindPopup('"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker2 = DG.marker([55.250748,	61.3994117]).addTo(map).bindPopup('"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker3 = DG.marker([55.2521512,	61.3951404]).addTo(map).bindPopup('ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker4 = DG.marker([55.1571589,61.388828]).addTo(map).bindPopup('ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker5 = DG.marker([55.1635348,	61.3882177]).addTo(map).bindPopup('ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker6 = DG.marker([55.1790805,	61.403032]).addTo(map).bindPopup('ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker7 = DG.marker([55.2521882,	61.4009497]).addTo(map).bindPopup('ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+      marker8 = DG.marker([55.2521882,	61.4009497]).addTo(map).bindPopup('ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"');
+
+      group = DG.featureGroup([marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8]);
+              group.addTo(map);
+              group.on('click', function(e) {map.setView([e.latlng.lat, e.latlng.lng]);});
+      });
+  </script>
+  <div>
+    <select class="" name="">
+    <option value="">"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОДРУЖЕСТВО"</option>
+    <option value="">"ООО Рога и копыта"</option>
+    </select>
+  </div>
+  </body>
+</html>
+<!-- 55.251028	61.400826
+55.250748	61.3994117
+-1.0	-1.0
+-1.0	-1.0
+55.2521512	61.3951404
+-1.0	-1.0
+55.1571589	61.388828
+55.1635348	61.3882177
+55.1790805	61.403032
+55.2521882	61.4009497
+-1.0	-1.0
+55.2521882	61.4009497 -->

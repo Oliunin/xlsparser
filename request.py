@@ -16,9 +16,11 @@ def getaddr(house_guidGuid):
     try:
         ssug=dsug[0]
         addr=ssug.get("value")
+        dcoord=ssug.get("data")
     except:
         addr=('Отсутствуют данные ФИАС')
 #    print(type(addr),addr)
+
     return addr
     #зДЕСЬ БУДУТ ДАННЫЕ:
     #print('адрес по ФИАС:',ssug.get("value"))
@@ -37,7 +39,7 @@ for thouse in house_list:
     addr=getaddr(house_guid)
     time=dt.datetime.now()
     timestamp=time.strftime("%Y-%m-%d %H:%M:%S")
-    cur.execute('''UPDATE House SET House_addr=?,timestamp=? WHERE House_fias_code=?;''' ,( addr,timestamp,house_guid,))
+    cur.execute('''UPDATE House SET House_addr=?, timestamp=?, WHERE House_fias_code=?;''' ,( addr, timestamp,house_guid,))
 #        rid=return cur.lastrowid
     print(timestamp,'data inserted:',i,'fias guid:',house_guid,'addr:',addr)
     conn.commit()

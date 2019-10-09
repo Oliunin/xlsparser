@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- [55.15402, 61.42915]
+[55.2510643, 61.4002826] -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Карта Челябинска</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<f3c4c9f1-46b0-48a7-ab0f-93e1560ecde7>&lang=ru_RU" type="text/javascript"></script>
+      <script type="text/javascript">
+        ymaps.ready(function(){
+            // Указывается идентификатор HTML-элемента.
+            // debugger;
+            var chel_map = new ymaps.Map("first_map", {
+                center: [55.15402, 61.42915],
+                zoom: 10
+            });
+            // Ссылка на элемент.
+            // var piter_map = new ymaps.Map(document.getElementsByTagName('p')[2], {
+            //     center: [59.94, 30.32],
+            //     zoom: 9
+            // });
+            // Создание геообъекта с типом точка (метка).
+            var myGeoObject = new ymaps.GeoObject({
+              geometry: {type: "Point", coordinates: [55.2510643, 61.4002826]}});
+            // Размещение геообъекта на карте.
+            chel_map.geoObjects.add(myGeoObject);
+        });
+      </script>
+
+  </head>
+  <body>
+    <div id="first_map" style="width: 750px; height: 500px" ></div>
+    <p style="width:400px; height:200px"></p>
+  </body>
+</html>
